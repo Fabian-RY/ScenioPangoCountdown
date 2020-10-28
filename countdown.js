@@ -5,7 +5,7 @@ class program{
         this.day = day;
         this.hour = hour;
         this.min_ = min_;
-        this.factor = 1///3.3*Math.pow(10, 10);
+        this.factor = 3.3*Math.pow(10, 10)*60;
     }
     
     
@@ -24,11 +24,12 @@ class program{
         }
         console.log(seconds_left);
         // Falta comprobar cuando se ha emitido ya el programa ese día
-        var seconds = seconds_left % 60; var minutes = Math.floor(seconds_left/60);
-        var mins = minutes % 60; var hours_ = Math.floor(minutes/60);
-        var hours = hours_ % 24; var days = Math.floor(hours_/24);
-        console.log(days, hours, mins, seconds)
-        document.getElementById(id).innerHTML = days + ' dias ' + hours + ' horas ' + mins + ' minutos ' + seconds + ' segundos restantes';
+        //var seconds = seconds_left % 60; var minutes = Math.floor(seconds_left/60);
+        //var mins = minutes % 60; var hours_ = Math.floor(minutes/60);
+        //var hours = hours_ % 24; var days = Math.floor(hours_/24);
+        //console.log(days, hours, mins, seconds)
+        //document.getElementById(id).innerHTML = days + ' dias ' + hours + ' horas ' + mins + ' minutos ' + seconds + ' segundos restantes';
+        document.getElementById(id).innerHTML = seconds_left*this.factor/Math.pow(10, 9) + ' Gigapangolines-luz hasta que empiece';
     }
 }
 
