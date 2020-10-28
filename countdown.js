@@ -37,7 +37,8 @@ function calc(){
     let SE = new program('SE', 0, 20, 30);
     let ciencia = new program('100cia',1, 19, 0);
     let crespos = new program('Crespación', 3, 20, 30);
-    let boson = new program('Bosón', 5, 20, 30);
+    let boson = new program('Bosón', 4, 20, 30);
+    //let geek = new program('Geek', 0, 19, 0);
     
     var now = new Date();
     
