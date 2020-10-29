@@ -1,23 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>The final Pangodown</title>
+  	<script src="countdown.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+    <script>
+        function iniciar(){
+            var time_ = document.getElementById('input_').value
+            if(!isNaN(time_)){
+                window.time = time_;
+            }
+            else {
+                alert('Introduce cuantos pangolines-minutos quieres contar');
+            }
+          }
+        var time = 10;
+    </script>
+    <!-- Bootstrap core CSS -->
+<link href="bootstrap-4.5.3-examples/assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<head>
-	<script src="countdown.js"></script> 
-</head>
-<body>
-	<h1>Scenio Pangolin Countdown - by @fabianry97</h1>
-	<h2>It's the final countdown</h2>
-	<h3>Science Stravaganzza</h3>
-    	<p id='SE'>Domingo 20:30</p>
-	    <p id='SE_Time' />
-	<h3>100cia al cubo</h3>
-		<p id='ciencia'>Lunes 19</p>
-	    <p id='ciencia_Time' />
-	<h3>Crespación en la cocina</h3>
-		<p id='crespos'>Miercoles 20:30</p>
-	    <p id='crespos_Time' />
-	<h3>El bosón de Twitch</h3>
-        <p id='Boson'>Jueves 19:00</p>
-	    <p id='Boson_Time' />
-	<script>
-	    window.setInterval(calc, 1000);
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      h1 {
+        text-align:center;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="bootstrap-4.5.3-examples/album/album.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">Sobre ésta página</h4>
+          <p class="text-white">¿Quién quiere usar medidas de tiempo obsoletas como el minuto y la hora?. Como bien sabe todo seguidor de ScenioTV, la unidad de tiempo más adecuada en todo moménto es el pangolín-luz (Y sus múltiplos como el kilopangolin-luz, gigapangolín-luz, etc). Por eso en ésta página tienes una cuenta atrás hasta la próxima emisión de Scenio, ¡en gigapangolines hasta que empiece!</p>
+          <p class="text-white">Autor: Fabián Robledo (@fabianry97 y @SagasCiencia en Twitter) con permiso de Scenio, gracias a la idea de @LoBiología</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">¡Sigue a Scenio!</h4>
+          <ul class="list-unstyled">
+            <li><a href="https://www.twitter.com/sceniotv" class="text-white">Sigue a ScenioTV en Twitter</a></li>
+            <li><a href="https://www.twitter.com/scenio" class="text-white">Sigue a Scenio en Twitter</a></li>
+            <li><a href="https://www.twitch.com/scenio" class="text-white">Sigue a ScenioTV en Twitch</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <img src='https://pbs.twimg.com/profile_images/1244263218442313731/p0tE8tRY_400x400.jpg' width="20" height="20" fill="none" />
+        <strong>  Cuenta atrás pangolinesca</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+          <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="50%" height="225" src="https://pbs.twimg.com/profile_images/1244263218442313731/p0tE8tRY_400x400.jpg" />
+                <input id='input_' class="bd-placeholder-img card-img-top" width="100%" height="225" />
+                <div class="card-body">
+                  <button class="card-text" onClick='iniciar();'>Iniciar</button>
+                  <p class="card-text">Cuenta atrás personalizada (Por defecto, inicia en 10 minutos. Insertar minutos en el cuadro)</p>
+                  <p id='C_Time' />
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Ir a Twitch</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="imgs/Stravaganzza.png" />
+            <div class="card-body">
+              <p class="card-text">Science Stravaganzza</p>
+              <p id='SE_Time' />
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Ir a Twitch</button>
+                </div>
+                <small class="text-muted">Duración:120 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="imgs/100cia.jpeg" />
+            <div class="card-body">
+              <p class="card-text">100cia al cubo</p>
+              <p id='ciencia_Time' />
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Ir a Twitch</button>
+                </div>
+                <small class="text-muted">Duración:120 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="imgs/Crespos.jpeg" />
+            <div class="card-body">
+              <p class="card-text">Crespación en la cocina</p>
+              <p id='crespos_Time' />
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Ir a twitch</button>
+                </div>
+                <small class="text-muted">Duración:120 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="imgs/Boson.png" />
+            <div class="card-body">
+              <p class="card-text">El bosón de Twitch</p>
+              <p id='Boson_Time' />
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Ir a Twitch</button>
+                </div>
+                <small class="text-muted">Duración:120 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="imgs/Geek.jpeg" />
+            <div class="card-body">
+              <p class="card-text">Geek and Freak science.</p>
+              <p>Temporada finalizada</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
+                <small class="text-muted">--- mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="bootstrap-4.5.3-examples/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="bootstrap-4.5.3-examples/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="bootstrap-4.5.3-examples/assets/dist/js/bootstrap.bundle.min.js"></script>
+      
+      <script>
+	  window.setInterval(calc, 1000);
 	</script>
-</body>
+</html>
